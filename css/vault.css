@@ -1,0 +1,38 @@
+.vault {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
+
+.vault .sec_title .morse_bar {gap:3px;margin-left:2px;}
+
+.vault-wrapper .category {display:flex;justify-content:center;gap:10px;margin-bottom:50px;}
+.vault-wrapper .category li {font-size:0.875rem;padding:0.5rem 1rem;border:1px solid #fff;border-radius:2rem;cursor:pointer;transition:all 0.3s;}
+.vault-wrapper .category li:hover {background:#fff;color:#1E2A4C;}
+.vault-wrapper .category li.active {background:#fff;color:#1E2A4C;}
+
+.vault-wrapper .item-wrapper {display:grid;grid-template-columns:repeat(2,1fr);gap:50px;}
+.vault-wrapper .item-wrapper .item {width:100%;border:1px solid #fff;padding:1.5rem;}
+
+/* 뭐가 더 예쁠까아아 앞에만 item 으로 바꾸면 됨 */
+.personal {display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
+.personal .thum {width:100%;aspect-ratio:1/1;overflow:hidden;}
+.personal .thum img {width:100%;}
+.playground {}
+
+
+
+
+
+
+
+
+
+/* design */
+.design-wrapper {margin-top:100px;}
+.design-swiper {overflow:hidden;position:relative;width:100%;}
+.design-wrapper .swiper-slide .image-box {width:100%;aspect-ratio:1/1;overflow:hidden;position:relative;cursor:pointer;}
+.design-wrapper .swiper-slide .image-box:hover img {transform:scale(1.2);}
+.design-wrapper .swiper-slide img {width:100%;object-fit:cover;object-position:center;display:block;transition:all 0.5s;}
+
+/* 페이지네이션 커스텀 */
+.design-wrapper .swiper-pagination {position:static;text-align:center;margin-top:8px;}
+.swiper-pagination-bullet {width:auto;height:auto;margin:0 4px;display:inline;background: none !important; /* 파란 배경 제거 */}
+.swiper-pagination-bullet i {font-size:8px;color:rgba(255, 255, 255, 0.3);filter:drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));transition:all 0.3s ease;}
+.swiper-pagination-bullet.swiper-pagination-bullet-active > i {color:#ffffff;filter:drop-shadow(0 0 4px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));}

@@ -1,0 +1,4 @@
+.tone {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
+
+.tone .sec_title .morse_bar {gap:6px;}
+.tone .sec_title .morse_bar .line {min-width:10px;}

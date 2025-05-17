@@ -1,0 +1,129 @@
+.signal {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
+
+/* background */
+.canvas {position:absolute;top:0;left:0;display:block;width:100%;height:100%;}
+
+.signal .title {display:flex;justify-content:center;align-items:center;min-height:100vh;gap:450px;}
+.signal .main_title {font-size:4rem;}
+.signal .sub_title {font-family:"Cormorant Garamond", serif;font-size:1.1rem;line-height:140%;}
+
+/* logo */
+.logo {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+
+.dia-wrapper {width:250px;height:250px;position:relative;animation:softBounce 2.2s ease-in-out infinite;z-index:2;}
+.diamond {width:100%;height:100%;}
+
+@keyframes softBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+.orbit-wrapper {
+  position:absolute;
+  width:400px;height:400px;
+  top:50%;left:50%;
+  transform-style:preserve-3d;
+  transform:translate(-50%, -50%);
+  z-index:1;
+}
+
+.orbit1 {animation:orbit-rotate-left 20s linear infinite;}
+.orbit2 {animation:orbit-rotate-right 28s linear infinite;}
+
+@keyframes orbit-rotate-left {
+  0% {transform:translate(-50%, -50%) rotate3d(1, 0.4, 0, 75deg) rotateZ(0deg);}
+  100% {transform:translate(-50%, -50%) rotate3d(1, 0.4, 0, 75deg) rotateZ(360deg);}
+}
+
+@keyframes orbit-rotate-right {
+  0% {transform:translate(-50%, -50%) rotate3d(1, -0.4, 0, 75deg) rotateZ(0deg);}
+  100% {transform:translate(-50%, -50%) rotate3d(1, -0.4, 0, 75deg) rotateZ(-360deg);}
+}
+
+.planet-orbit {
+  position:absolute;
+  width:400px;height:400px;
+  top:50%;left:50%;
+  transform-style:preserve-3d;
+  transform:translate(-50%, -50%) rotateX(75deg);
+  z-index: 1; /* 뒤로! */
+}
+
+.planet-img-wrapper {
+  position:absolute;
+  width:50px;height:50px;
+  top:50%;left:50%;
+  transform-style:preserve-3d;
+  z-index:1; /* 반드시 있어야 함 */
+}
+
+.planet-img {
+  width:100%;height:100%;
+  object-fit:contain;
+  pointer-events:none;
+}
+
+
+.ping-wrapper {
+  position:absolute;
+  bottom:-10px;left:50%;transform:translateX(-50%);
+  cursor:pointer;
+}
+
+.ping_circle {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #C4BDF3 0%, transparent 70%);
+  animation: pingEffect 1.2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pingEffect {
+  0% {transform:scale(1); opacity: 0.6;}
+  50% {transform:scale(1.6); opacity: 0.2;}
+  100% {transform:scale(2); opacity: 0;}
+}
+
+.ping_text {text-align:center;transform:translateY(-70px);font-size:0.75rem;opacity:0.4;}
+
+.ping_tooltip {
+  position: absolute;
+  bottom: 130%; /* 버튼 위 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 20, 40, 0.9);
+  color: #C4BDF3;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  line-height: 1.5;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 6px rgba(196, 189, 243, 0.4);
+  z-index: 10;
+}
+
+.ping_tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(20, 20, 40, 0.9) transparent transparent transparent;
+}
+
+.ping-wrapper:hover .ping_tooltip {
+  opacity: 1;
+}
+
+/* .tree {width:80vw;
+      max-width:600px;
+      height:auto;}
+.tree svg {width:100%;
+      height:auto;
+      display:block;} */

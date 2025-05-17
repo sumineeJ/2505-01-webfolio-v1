@@ -1,0 +1,9 @@
+.ping {min-width:100%;min-height:100vh;position:relative;}
+
+.ping .inner {display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;}
+
+.ping .contact {display:flex;gap:100px;}
+.ping .contact p {font-size:1.5rem;font-weight:100;line-height:1.5;}
+.ping .email {text-align:center;font-size:1.5rem;font-weight:100;margin-top:100px;}
+
+.ping .copy {position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);}
