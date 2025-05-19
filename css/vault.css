@@ -1,35 +1,51 @@
 .vault {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
 
-.vault .sec_title .morse_bar {gap:3px;margin-left:2px;}
+.vault .sec_title .morse_bar {gap:2.5px;}
+.vault .sec_title .morse_bar .line {min-width:7px;}
+
+.vault-title {text-align:center;margin-bottom:30px;}
+.vault-title .label {font-size:2.5rem;font-weight:100;color:#E0E6F8;letter-spacing:0.05em;margin-bottom:0.25rem;}
+.vault-title .desc {font-size:0.825rem;color:#9DA9C6;}
 
 .vault-wrapper .category {display:flex;justify-content:center;gap:10px;margin-bottom:50px;}
-.vault-wrapper .category li {font-size:0.875rem;padding:0.5rem 1rem;border:1px solid #fff;border-radius:2rem;cursor:pointer;transition:all 0.3s;}
-.vault-wrapper .category li:hover {background:#fff;color:#1E2A4C;}
-.vault-wrapper .category li.active {background:#fff;color:#1E2A4C;}
+.vault-wrapper .category li {font-size:0.875rem;padding:0.5rem 1rem;border:1px solid #3a4b6d;border-radius:2rem;cursor:pointer;transition:all 0.3s;}
+.vault-wrapper .category li:hover {background:#3a4b6d;}
+.vault-wrapper .category li.active {background:#3a4b6d;}
 
-.vault-wrapper .item-wrapper {display:grid;grid-template-columns:repeat(2,1fr);gap:50px;}
-.vault-wrapper .item-wrapper .item {width:100%;border:1px solid #fff;padding:1.5rem;}
+.item-wrapper {display:grid;grid-template-columns:repeat(2,1fr);gap:50px;}
+.item-wrapper .item {width:100%;border:1px solid #3a4b6d;border-radius:5px;padding:1.5rem;transition:all 0.3s;cursor:pointer;}
+.item-wrapper .item:hover {background:rgba(58,75,109,0.5);}
+/* .item-wrapper .item {display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;} */
+.item-wrapper .item .thum {width:100%;aspect-ratio:1/0.7;border-radius:5px;overflow:hidden;position:relative;}
+.item-wrapper .item .thum img {width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
+.item-wrapper .item .thum i {position:absolute;top:1.25rem;left:1.5rem;font-size:2.5rem;}
+.item-wrapper .item .tag {position:absolute;bottom:1.25rem;left:1.5rem;display:flex;}
+.item-wrapper .item .tag li {font-size:0.75rem;padding:0.5rem 1rem;border-radius:5px;margin-right:1rem;background:#EFEFFF;color:#555;}
+.item-wrapper .item .info {margin-top:1.25rem;display:flex;flex-direction:column;gap:0.25rem;}
+.item-wrapper .item .info .title {font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:0.25rem;}
+.item-wrapper .item .info .details {font-size:1rem;color:#ccc;line-height:1.6;}
+.item-wrapper .item .info .tools {font-size:0.8125rem;color:#aaa;font-style:italic;margin-top:4px;}
 
-/* 뭐가 더 예쁠까아아 앞에만 item 으로 바꾸면 됨 */
-.personal {display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
-.personal .thum {width:100%;aspect-ratio:1/1;overflow:hidden;}
-.personal .thum img {width:100%;}
-.playground {}
+/* overlay */
+.item-wrapper .item .thum .overlay {position:absolute;bottom:0;left:0;width:100%;text-align:right;padding:1.25rem;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);color:#fff;font-size:0.875rem;line-height:1.6;opacity:0;transform:translateY(10px);transition:opacity 0.3s ease,transform 0.3s ease;z-index:2;}
+.item-wrapper .item:hover .thum .overlay {opacity:1;transform:translateY(0);}
 
+/* overlay text */
+.item-wrapper .item .thum .overlay p:nth-child(1) {font-size:1rem;font-weight:600;color:#fff;margin-bottom:0.25rem;}
+.item-wrapper .item .thum .overlay p:nth-child(2) {font-size:0.8125rem;color:#ccc;margin-bottom:0.25rem;}
+.item-wrapper .item .thum .overlay p:nth-child(3) {font-size:0.75rem;color:#aaa;font-style:italic;}
 
-
-
-
-
-
-
+/* tag */
+#tag_personal {background:#C4BDF3;color:#fff;}
+#tag_team {background:#A79CEB;color:#fff;}
+#tag_playground {background:#6C60D8;color:#fff;}
 
 /* design */
 .design-wrapper {margin-top:100px;}
 .design-swiper {overflow:hidden;position:relative;width:100%;}
 .design-wrapper .swiper-slide .image-box {width:100%;aspect-ratio:1/1;overflow:hidden;position:relative;cursor:pointer;}
-.design-wrapper .swiper-slide .image-box:hover img {transform:scale(1.2);}
-.design-wrapper .swiper-slide img {width:100%;object-fit:cover;object-position:center;display:block;transition:all 0.5s;}
+.design-wrapper .swiper-slide .image-box:hover img {transform:scale(1.2);opacity:1;}
+.design-wrapper .swiper-slide img {width:100%;object-fit:cover;object-position:center;display:block;opacity:0.6;transition:all 0.5s;}
 
 /* 페이지네이션 커스텀 */
 .design-wrapper .swiper-pagination {position:static;text-align:center;margin-top:8px;}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>I'm Sumin</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/signal.css">
@@ -81,30 +81,28 @@
           <div class="title_main">
             <h2>Pulse </h2>
             <div class="morse_bar">
-              <!-- P: · – – · -->
+              <!-- A: · – -->
               <span class="dot"></span>
               <span class="line"></span>
+
+              <!-- B: – · · · -->
               <span class="line"></span>
               <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+
+              <!-- O: – – – -->
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
 
               <!-- U: · · – -->
               <span class="dot"></span>
               <span class="dot"></span>
               <span class="line"></span>
 
-              <!-- L: · – · · -->
-              <span class="dot"></span>
+              <!-- T: – -->
               <span class="line"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-
-              <!-- S: · · · -->
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-
-              <!-- E: · -->
-              <span class="dot"></span>
             </div>
           </div>
           <p>작업을 대하는 방식과 '정수민'이라는 사람에 대해 소개합니다.</p>
@@ -120,8 +118,8 @@
               <p>디자인과 퍼블리싱을 배워가며 ‘어떻게 보여줄까’보다 ‘어떻게 쓰일까’를 먼저 생각하게 되었습니다. 눈에 띄는 비주얼보다는, 맥락에 맞고 일관된 흐름 속에서 자연스럽게 사용될 수 있는 인터페이스에 매력을 느낍니다. 결국 중요한 건 <strong>작은 요소들이 모여 하나의 경험을 만든다는 점</strong>이니까요.</p>
               <p>제가 만든 결과물이 누군가에게 조금 더 쉬운 선택이 되길 바랍니다. 때로는 고민한 흔적이 보이지 않는 디자인이, 누군가의 흐름을 가장 부드럽게 도울 수도 있으니까요. 이 포트폴리오에는 그 과정을 어떻게 지나왔는지, 제가 어떤 질문들을 던지며 작업해왔는지가 담겨 있습니다.</p>
               <div class="more">
-                <div class="view_btn">이력서 보러가기</div>
-                <div class="view_btn">깃허브로 이동</div>
+                <div class="view_btn" onclick="window.open('https://celestial-icecream-28e.notion.site/1f79c8e18a1f8078a7a5e23ea59f60ed', '_blank')">이력서 보러가기</div>
+                <div class="view_btn" onclick="window.open('https://github.com/sumineeJ/project-archive', '_blank')">깃허브로 이동</div>
               </div>
             </div>
           </div>
@@ -142,57 +140,213 @@
           <div class="title_main">
             <h2>Vault</h2>
             <div class="morse_bar">
-              <!-- V: · · · – -->
+              <!-- W: · – – -->
               <span class="dot"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+
+              <!-- O: – – – -->
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+
+              <!-- R: · – · -->
               <span class="dot"></span>
+              <span class="line"></span>
+              <span class="dot"></span>
+
+              <!-- K: – · – -->
+              <span class="line"></span>
               <span class="dot"></span>
               <span class="line"></span>
 
-              <!-- A: · – -->
-              <span class="dot"></span>
-              <span class="line"></span>
-
-              <!-- U: · · – -->
+              <!-- S: · · · -->
               <span class="dot"></span>
               <span class="dot"></span>
-              <span class="line"></span>
-
-              <!-- L: · – · · -->
               <span class="dot"></span>
-              <span class="line"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-
-              <!-- T: – -->
-              <span class="line"></span>
             </div>
           </div>
           <p>완성된 프로젝트를 목적과 흐름에 따라 정리한 공간입니다.</p>
         </div>
         <div class="vault-wrapper">
+          
+          <div class="vault-title">
+            <h3 class="label">Project</h3>
+            <p class="desc">주제와 목적에 따라 하나의 흐름으로 완성한 개인 및 팀 프로젝트입니다.</p>
+          </div>
+
           <ul class="category">
             <li class="active" data-filter="all">All</li>
             <li data-filter="personal">Personal</li>
             <li data-filter="team">Team</li>
             <li data-filter="playground">Playground</li>
           </ul>
+
           <div class="item-wrapper">
+
+            <!-- 7 웹 포트폴리오 -->
             <div class="item personal">
               <div class="thum">
-                <img src="https://picsum.photos/200/300" alt="이미지">
+                <img src="img/project-07-webfolio-v1.png" alt="웹 포트폴리오 v1">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_personal">#Personal</li>
+                  <li>#Responsive_Web</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">작업물을 신호처럼 정리한 반응형 웹사이트</p>
+                  <p class="role">포트폴리오 · 인터랙션 · 구조화</p>
+                  <p class="desc">섹션 기획부터 인터랙션, 반응형 퍼블리싱까지 직접 설계 및 구현</p>
+                </div>
               </div>
               <div class="info">
-                <p>프로젝트 이름 <span>기간</span></p>
-                <p>BI Design <span>로고 디자인</span></p>
-                <p>PERSONAL <span>기여도 100%</span></p>
+                <p class="title">개인 웹 포트폴리오 v1 제작</p>
+                <p class="details">2025.05 · 개인 작업물</p>
+                <p class="tools">HTML · CSS · JavaScript</p>
               </div>
             </div>
-            <div class="item personal"> ... </div>
-            <div class="item playground"> ... </div>
-            <div class="item playground"> ... </div>
+
+            <!-- 6 돌봐효 -->
+            <div class="item team">
+              <div class="thum">
+                <img src="https://picsum.photos/200/300" alt="돌봐효">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_team">#Team</li>
+                  <li>#App_UIUX</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">신뢰와 편안함을 담은 브랜드 리디자인</p>
+                  <p class="role">브랜딩 · 헬스케어 · 클리닉</p>
+                  <p class="desc">초기 기획부터 로고 제작까지 직접 담당</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">돌봐효 앱 고도화 리뉴얼</p>
+                <p class="details">2025.05 · 기획 일부 담당 · 기여도 20%</p>
+                <p class="tools">Figma</p>
+              </div>
+            </div>
+
+            <!-- 5 투어지 -->
+            <div class="item team">
+              <div class="thum">
+                <img src="img/project-05-tourzy.png" alt="투어지">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_team">#Team</li>
+                  <li>#App_UIUX</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">누구나 쉽게 빌리고 탈 수 있는 공유 자전거 앱</p>
+                  <p class="role">팀 프로젝트 · 교통 · 사용자 중심 구조</p>
+                  <p class="desc">화면 구조 기획 일부 참여부터 랜딩페이지 퍼블리싱 단독 진행</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">투어지 공유 자전거 앱 UIUX 기획 및 랜딩페이지 제작</p>
+                <p class="details">2025.04 · 기획 일부 퍼블리싱 단독 담당 · 기여도 30%</p>
+                <p class="tools">HTML · CSS · JavaScript · Figma · Photoshop</p>
+              </div>
+            </div>
+
+            <!-- 4 야채부락리 -->
+            <div class="item personal">
+              <div class="thum">
+                <img src="https://picsum.photos/200/300" alt="야채부락리">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_personal">#Personal</li>
+                  <li>#Responsive_Web</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">게임 내 플레이하고 있는 듯한 느낌의 웹 페이지</p>
+                  <p class="role">웹사이트 · 게임 인터페이스</p>
+                  <p class="desc">스토리 있는 UI 구조와 인터랙션 중심의 게임형 웹 기획 & 퍼블리싱</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">야채부락리 게임형 웹사이트 리디자인</p>
+                <p class="details">2024.03 ~ 진행 중 · 개인 작업물</p>
+                <p class="tools">HTML · CSS · JavaScript</p>
+              </div>
+            </div>
+
+            <!-- 3 멍비서 -->
+            <div class="item personal">
+              <div class="thum">
+                <img src="img/project-03-mungbiseo.png" alt="멍비서">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_personal">#Personal</li>
+                  <li>#UIUX</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">함께 걷고, 기록하고, 돌보는 반려견 케어 앱</p>
+                  <p class="role">UX 기획 · 산책 기록 · 커뮤니티</p>
+                  <p class="desc">핵심 기능 도출부터 정보 구조, 주요 화면 디자인까지 단독 진행</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">멍비서 반려견 건강/산책 앱 기획 및 UIUX 디자인</p>
+                <p class="details">2025.02 ~ 2025.04 · 개인 작업물</p>
+                <p class="tools">Figma · Photoshop · Illustrator</p>
+              </div>
+            </div>
+
+            <!-- 2 인하대 -->
+            <div class="item team">
+              <div class="thum">
+                <img src="img/project-02-inha.png" alt="인하대">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_team">#Team</li>
+                  <li>#Responsive_Web</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">콘텐츠 중심의 반응형 대학교 홈페이지 리디자인</p>
+                  <p class="role">웹사이트 · 리디자인 · 콘텐츠 중심 구조</p>
+                  <p class="desc">콘텐츠 정보 구조 정리부터 퍼블리싱까지 전체 흐름 설계 및 구현</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">인하대학교 웹 리디자인</p>
+                <p class="details">2025.02 ~ 작업 중 · 개인 작업물</p>
+                <p class="tools">HTML · CSS · JavaScript · Figma · Photoshop</p>
+              </div>
+            </div>
+
+            <!-- 1 봄바람재활의학과의원 -->
+            <div class="item personal">
+              <div class="thum">
+                <img src="img/project-01-bombaram.png" alt="봄바람재활의학과의원">
+                <i class="ph ph-folder-simple"></i>
+                <ul class="tag">
+                  <li id="tag_personal">#Personal</li>
+                  <li>#BI_design</li>
+                </ul>
+                <div class="overlay">
+                  <p class="summary">신뢰와 편안함을 담은 브랜드 디자인</p>
+                  <p class="role">브랜딩 · 헬스케어 · 클리닉</p>
+                  <p class="desc">초기 기획부터 로고 제작까지 직접 담당</p>
+                </div>
+              </div>
+              <div class="info">
+                <p class="title">봄바람재활의학과 BI 디자인</p>
+                <p class="details">2024.12 ~ 2025.01 · 개인 작업물</p>
+                <p class="tools">Photoshop · Illustrator</p>
+              </div>
+            </div>
+
           </div>
         </div>
         <div class="design-wrapper">
+
+          <div class="vault-title">
+            <h3 class="label">Design</h3>
+            <p class="desc">카드 뉴스, 상세 페이지 등 비교적 가벼운 시각 디자인 작업입니다.</p>
+          </div>
+
           <!-- Slider main container -->
           <div class="design-swiper swiper">
             <!-- Additional required wrapper -->
@@ -210,17 +364,12 @@
               </div>
               <div class="swiper-slide">
                 <div class="image-box">
-                  <img src="https://picsum.photos/200/300" alt="이미지">
+                  <img src="https://sumineej.github.io/designs-01/cardnews-02-kpass/1.png" alt="K패스 카드뉴스 썸네일">
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="image-box">
-                  <img src="https://picsum.photos/200/300" alt="이미지">
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="image-box">
-                  <img src="https://picsum.photos/200/300" alt="이미지">
+                  <img src="https://sumineej.github.io/designs-01/cardnews-01-disk/1.png" alt="허리디스크 카드뉴스 썸네일">
                 </div>
               </div>
             </div>
@@ -238,19 +387,27 @@
           <div class="title_main">
             <h2>Tone</h2>
             <div class="morse_bar">
-              <!-- T: – -->
-              <span class="line"></span>
-
-              <!-- O: – – – -->
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-
-              <!-- N: – · -->
+              <!-- L: · – · · -->
+              <span class="dot"></span>
               <span class="line"></span>
               <span class="dot"></span>
+              <span class="dot"></span>
+
+              <!-- I: · · -->
+              <span class="dot"></span>
+              <span class="dot"></span>
+
+              <!-- K: – · – -->
+              <span class="line"></span>
+              <span class="dot"></span>
+              <span class="line"></span>
 
               <!-- E: · -->
+              <span class="dot"></span>
+
+              <!-- S: · · · -->
+              <span class="dot"></span>
+              <span class="dot"></span>
               <span class="dot"></span>
             </div>
           </div>
@@ -268,7 +425,7 @@
     <div class="star_box"></div>
     <div class="inner">
       <div class="contact">
-        <h3>Ping</h3>
+        <h4>Ping</h4>
         <p>
           신호를 받으셨나요?<br>
           <br>

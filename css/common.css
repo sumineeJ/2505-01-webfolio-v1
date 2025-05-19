@@ -32,7 +32,8 @@ background: linear-gradient(
 /* text */
 h1 {font-family:"Codystar",sans-serif;font-weight:300;}
 h2 {font-family:"Orbit", sans-serif;font-weight:400;font-size:2.5rem;color:#E0E6F8;}
-h3 {font-size:5rem;font-weight:100;}
+h3 {text-align:center;}
+h4 {font-size:5rem;font-weight:100;}
 
 /* component */
 .sec_title {display:flex;align-items:flex-end;gap:30px;margin-bottom:100px;padding-top:200px;}
