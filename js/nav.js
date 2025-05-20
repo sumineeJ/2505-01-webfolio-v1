@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.querySelector('.ping-wrapper').addEventListener('click', () => {
+    const target = document.querySelector('.pulse');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
   const sections = [
     document.querySelector('.signal'),
     document.querySelector('.pulse'),

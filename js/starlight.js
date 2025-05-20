@@ -146,35 +146,87 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  const orbit = document.getElementById('orbit');
-const wrapper = document.getElementById('imgWrapper');
-let angle = 0;
-let prevX = null;
+  // orbit & wrapper
+  const orbit_record = document.getElementById('orbit_record');
+  const imgWrapper_record = document.getElementById('imgWrapper_record');
 
-function orbitAnimate() {
-  angle += 0.5;
-  const rad = angle * (Math.PI / 180);
-  const r = 170;
-  const offset = -20;
+  const orbit_emotion = document.getElementById('orbit_emotion');
+  const imgWrapper_emotion = document.getElementById('imgWrapper_emotion');
 
-  const x = r * Math.cos(rad) + offset;
-  const y = r * Math.sin(rad);
+  const orbit_storage = document.getElementById('orbit_storage');
+  const imgWrapper_storage = document.getElementById('imgWrapper_storage');
 
-  // 방향에 따라 부모인 .planet-orbit의 z-index를 바꾼다!
-  if (prevX !== null) {
-    if (x > prevX) {
-      orbit.style.zIndex = '0'; // 뒤로
-    } else {
-      orbit.style.zIndex = '3'; // 앞으로
+  // angle + prevX
+  let angle_record = 0;
+  let prevX_record = null;
+
+  let angle_emotion = 120;
+  let prevX_emotion = null;
+
+  let angle_storage = 240;
+  let prevX_storage = null;
+
+  // 속도, 반지름, 오프셋
+  const speed_record = 0.5;
+  const r_record = 150;
+  const offset_record = -20;
+
+  const speed_emotion = 0.8;
+  const r_emotion = 130;
+  const offset_emotion = 0;
+
+  const speed_storage = 0.3;
+  const r_storage = 170;
+  const offset_storage = -10;
+
+  function orbitAnimate() {
+    // 각도 증가
+    angle_record += speed_record;
+    angle_emotion += speed_emotion;
+    angle_storage += speed_storage;
+
+    // 라디안 변환
+    const rad_r = angle_record * (Math.PI / 180);
+    const rad_e = angle_emotion * (Math.PI / 180);
+    const rad_s = angle_storage * (Math.PI / 180);
+
+    // 좌표 계산
+    const x_r = r_record * Math.cos(rad_r) + offset_record;
+    const y_r = r_record * Math.sin(rad_r);
+
+    const x_e = r_emotion * Math.cos(rad_e) + offset_emotion;
+    const y_e = r_emotion * Math.sin(rad_e);
+
+    const x_s = r_storage * Math.cos(rad_s) + offset_storage;
+    const y_s = r_storage * Math.sin(rad_s);
+
+    // z-index 조절 (x가 줄어들면 앞으로, 늘어나면 뒤로)
+    if (prevX_record !== null) {
+      orbit_record.style.zIndex = x_r > prevX_record ? '0' : '3';
     }
+    prevX_record = x_r;
+
+    if (prevX_emotion !== null) {
+      orbit_emotion.style.zIndex = x_e > prevX_emotion ? '0' : '3';
+    }
+    prevX_emotion = x_e;
+
+    if (prevX_storage !== null) {
+      orbit_storage.style.zIndex = x_s > prevX_storage ? '0' : '3';
+    }
+    prevX_storage = x_s;
+
+    // transform 적용 (이미지는 정면)
+    imgWrapper_record.style.transform = `translate3d(${x_r}px, ${y_r}px, 0) rotateX(-75deg)`;
+    imgWrapper_emotion.style.transform = `translate3d(${x_e}px, ${y_e}px, 0) rotateX(-65deg)`;
+    imgWrapper_storage.style.transform = `translate3d(${x_s}px, ${y_s}px, 0) rotateX(-60deg)`;
+
+    requestAnimationFrame(orbitAnimate);
   }
-  prevX = x;
 
-  wrapper.style.transform = `translate3d(${x}px, ${y}px, 0) rotateX(-75deg)`;
-  requestAnimationFrame(orbitAnimate);
-}
+  orbitAnimate();
 
-orbitAnimate();
+
 
 
 });

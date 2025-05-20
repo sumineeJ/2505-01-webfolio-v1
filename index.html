@@ -43,33 +43,82 @@
         </div>
       </div>
       <div class="logo">
+
+        <!-- 중심 다이아 -->
         <div class="dia-wrapper">
           <svg class="diamond" viewBox="0 0 180 220">
-            <polygon points="90,0 180,110 90,220 0,110" fill="none" stroke="#C4BDF3" stroke-width="1" vector-effect="non-scaling-stroke"/>
+            <polygon
+              points="90,0 180,110 90,220 0,110"
+              fill="none"
+              stroke="#B6ABFF"
+              stroke-width="0.8"
+              stroke-opacity="0.9"
+              vector-effect="non-scaling-stroke"
+            />
           </svg>
         </div>
+
+        <!-- 궤도 1 -->
         <div class="orbit-wrapper orbit1">
           <svg class="orbit" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="90" stroke="#C4BDF3" stroke-width="1" stroke-dasharray="6 4" fill="none" />
+            <circle
+              cx="100" cy="100" r="90"
+              stroke="#B6ABFF"
+              stroke-width="0.6"
+              stroke-opacity="0.9"
+              stroke-dasharray="4 3"
+              fill="none"
+            />
           </svg>
         </div>
+
+        <!-- 궤도 2 -->
         <div class="orbit-wrapper orbit2">
           <svg class="orbit" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="90" stroke="#C4BDF3" stroke-width="1" fill="none" stroke-dasharray="0 10 10 5 1000" stroke-linecap="round" />
+            <circle
+              cx="100" cy="100" r="90"
+              stroke="#B6ABFF"
+              stroke-width="0.6"
+              stroke-opacity="0.9"
+              fill="none"
+              stroke-dasharray="0 6 8 3 1000"
+              stroke-linecap="round"
+            />
           </svg>
         </div>
-        <div class="planet-orbit" id="orbit">
-          <div class="planet-img-wrapper" id="imgWrapper">
-            <img src="img/planet.png" alt="입체 구체" class="planet-img" />
+
+        <div class="planet-orbit" id="orbit_emotion">
+          <div class="planet-img-wrapper" id="imgWrapper_emotion">
+            <img src="img/planet_emotion.png" alt="입체 구체" class="planet-img" />
           </div>
         </div>
+
+        <div class="planet-orbit" id="orbit_record">
+          <div class="planet-img-wrapper" id="imgWrapper_record">
+            <img src="img/planet_record.png" alt="입체 구체" class="planet-img" />
+          </div>
+        </div>
+
+        <div class="planet-orbit" id="orbit_storage">
+          <div class="planet-img-wrapper" id="imgWrapper_storage">
+            <img src="img/planet_storage.png" alt="입체 구체" class="planet-img" />
+          </div>
+        </div>
+
       </div>
       <div class="ping-wrapper">
         <div class="ping_circle"></div>
         <div class="ping_text">Catch<br>the<br>Signal</div>
         <div class="ping_tooltip">
-          📡 Begin receiving transmission...<br>신호를 수신합니다.
+          📡 Connect to the orbit<br>궤도에 접속 중...
         </div>
+      </div>
+
+      <div class="constellation">
+        <div class="aries"></div>
+        <div class="aries"></div>
+        <div class="aries"></div>
+        <div class="aries"></div>
       </div>
     </section>
 
@@ -109,7 +158,7 @@
         </div>
         <div class="pulse-wrapper">
           <div class="image">
-            <div class="img"><img src="https://picsum.photos/200/300" alt="이미지"></div>
+            <div class="img"><img src="img/pulse_picture.png" alt="프로필"></div>
           </div>
           <div class="info">
             <div class="title">저의 작업은 ‘조금 더 나은 방향’을 고민하는 기록입니다.</div>
@@ -124,12 +173,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="constellation">
-        <div class="aries"></div>
-        <div class="aries"></div>
-        <div class="aries"></div>
-        <div class="aries"></div>
       </div>
     </section>
     <!-- vault -->

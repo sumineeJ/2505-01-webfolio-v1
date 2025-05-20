@@ -23,30 +23,3 @@
 .pulse-wrapper .text p {color:#E0E6F8;margin-bottom:10px;}
 .pulse-wrapper .more {margin-top:40px;}
 .pulse-wrapper .more .view_btn:nth-child(1) {margin-right:10px;}
-
-.pulse .constellation {position:absolute;top:20%;right:10%;width:250px;height:130px;transition:all 0.5s;cursor:pointer;}
-.pulse .constellation:hover {transform:translateY(-30px);}
-
-.pulse .constellation .aries {position:absolute;width:4px;height:4px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff;animation: sparkle 2.5s infinite ease-in-out;}
-
-@keyframes sparkle {
-  0%, 100% {
-    box-shadow: 0 0 2px #fff;
-  }
-  50% {
-    box-shadow: 0 0 6px #fff;
-  }
-}
-
-.pulse .constellation .aries:nth-child(1) {top:20px;left:10px;}
-.pulse .constellation .aries:nth-child(2) {top:45px;right:60px;}
-.pulse .constellation .aries:nth-child(3) {bottom:60px;right:20px;}
-.pulse .constellation .aries:nth-child(4) {bottom:20px;right:10px;}
-
-.pulse .constellation .aries::before {content:"";position:absolute;height:1px;background:#fff;transform-origin:left center;opacity:0;transition:all 0.5s;}
-
-.pulse .constellation .aries:nth-child(1)::before {top:1px;left:0;width:178px;transform:rotate(8deg);}
-.pulse .constellation .aries:nth-child(2)::before {top:1px;left:0;width:49px;transform:rotate(27deg);}
-.pulse .constellation .aries:nth-child(3)::before {top:1px;left:2px;width:43px;transform:rotate(76deg);}
-
-.pulse .constellation:hover .aries::before {opacity:1;}
