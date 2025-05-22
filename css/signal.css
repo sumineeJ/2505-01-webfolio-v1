@@ -4,11 +4,18 @@
 .canvas {position:absolute;top:0;left:0;display:block;width:100%;height:100%;}
 
 .signal .title {display:flex;justify-content:center;align-items:center;min-height:100vh;gap:450px;}
-.signal .main_title {font-size:4rem;}
-.signal .sub_title {font-family:"Cormorant Garamond", serif;font-size:1.1rem;line-height:140%;}
+.signal .main_title {width:50%;font-size:5rem;text-align:right;opacity:0;transform:translateX(100px);transition:all 0.8s ease;}
+.signal .sub_title {width:50%;font-family:"Cormorant Garamond", serif;font-size:1.25rem;line-height:140%;letter-spacing:3px;opacity:0;transform:translateX(-100px);transition:all 0.8s ease;}
+
+.signal .main_title.show {opacity:1;transform:translateX(0);}
+.signal .sub_title.show {opacity:1;transform:translateX(0);}
 
 /* logo */
-.logo {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+.logo {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) translateY(30px);opacity:0;transition:all 0.8s ease;}
+.logo.show {
+  opacity: 1;
+  transform:translate(-50%,-50%) translateY(0);
+}
 
 .dia-wrapper {width:250px;height:250px;position:relative;animation:softBounce 2.2s ease-in-out infinite;z-index:2;}
 .diamond {width:100%;height:100%;}
@@ -43,6 +50,8 @@
 #orbit_record {transform:translate(-50%, -50%) rotateX(75deg);}
 /* 저장 행성 궤도 */
 #orbit_storage {transform:translate(-50%, -50%) rotateX(60deg);}
+
+
 
 /* 아래 스크롤 유도 핑 */
 .ping-wrapper {position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);cursor:pointer;}

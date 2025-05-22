@@ -118,10 +118,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  const startTime = Date.now(); // 시작 시간 기록
+
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // ✨ 화면 깨끗하게 유지
 
-    launchIfReady(); // 별 생성 조건 체크
+    // ⏱ 시작 후 6초가 지났을 때만 랜덤 별 생성
+    if (Date.now() - startTime > 6000) {
+      launchIfReady();
+    }
 
     stars.forEach(star => {
       star.update();
@@ -227,6 +232,84 @@ document.addEventListener('DOMContentLoaded', function () {
   orbitAnimate();
 
 
+  // 처음 한 번만 큰 별똥별 실행
+  function dropMainStar(callback) {
+    const star = {
+      x: canvas.width * 0.7,
+      y: canvas.height * 0,
+      speed: 5,
+      acceleration: 0.5,
+      angle: Math.PI / 4,
+      trail: [],
+      maxTrailLength: 50,
+      done: false
+    };
+
+    function update() {
+      star.speed += star.acceleration;
+      star.x -= star.speed * Math.cos(star.angle);
+      star.y += star.speed * Math.sin(star.angle);
+      star.trail.unshift({ x: star.x, y: star.y });
+      if (star.trail.length > star.maxTrailLength) star.trail.pop();
+      if ((star.x < -200 || star.y > canvas.height + 200) && star.trail.length === 0) star.done = true;
+    }
+
+    function draw() {
+      for (let i = 0; i < star.trail.length - 1; i++) {
+        const a = star.trail[i];
+        const b = star.trail[i + 1];
+        const alpha = (1 - i / star.trail.length) ** 2;
+        const color = `rgba(210, 190, 255, ${alpha})`;
+
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = color;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+
+    function animateMainStar() {
+      if (!star.done) {
+        update();
+        draw();
+        requestAnimationFrame(animateMainStar);
+      }
+    }
+
+    animateMainStar();
+
+    callback();
+  }
+
+  function revealTitles() {
+    console.log("🔥 revealTitles 실행됨");
+    const logo = document.querySelector('.logo');
+    const mainTitle = document.querySelector('.signal .main_title');
+    const subTitle = document.querySelector('.signal .sub_title');
+    const nav = document.querySelector('.nav');
+
+    setTimeout(() => logo.classList.add('show'), 1300);
+    setTimeout(() => mainTitle.classList.add('show'), 1600);
+    setTimeout(() => subTitle.classList.add('show'), 1900);
+    setTimeout(() => nav.classList.add('show'), 2200);
+  }
+
+
+  setTimeout(() => {
+    const splash = document.querySelector('.splash');
+    if (splash) {
+      document.body.classList.remove('loading');
+      splash.classList.add('fade-out');
+      setTimeout(() => {
+        splash.remove();
+        dropMainStar(revealTitles);
+      }, 1000);
+    }
+  }, 2000);
 
 
 });
