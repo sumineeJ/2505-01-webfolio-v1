@@ -23,3 +23,13 @@
 .pulse-wrapper .text p {color:#E0E6F8;margin-bottom:10px;}
 .pulse-wrapper .more {margin-top:40px;}
 .pulse-wrapper .more .view_btn:nth-child(1) {margin-right:10px;}
+
+@media screen and (max-width: 1024px) {
+  .pulse-wrapper {align-items:start;}
+}
+@media screen and (max-width: 767px) {
+  .pulse .inner {height:auto;padding-top:100px;}
+  .pulse-wrapper {flex-direction:column;align-items:center;}
+  .pulse-wrapper .image {width:80%;}
+  .pulse-wrapper .info {width:100%;}
+}

@@ -25,22 +25,23 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const navItems = document.querySelectorAll('.nav ul li');
-  const lineWidths = [91, 91, 86, 83];
   const unlockThreshold = 0.99;
 
   function updateLines() {
     const scrollY = window.scrollY;
     const unlocked = [];
 
+    // ✅ 반응형 lineWidths 설정
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const lineWidths = isMobile ? [70, 70, 65, 60] : [91, 91, 86, 83];
+
     const progresses = sections.map((section, index) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
 
-      // ✅ 선 그리기용 진행률 계산 (그대로 유지)
       const rawProgress = scrollY - sectionTop;
       const progress = Math.min(Math.max(rawProgress / sectionHeight, 0), 1);
 
-      // ✅ active 처리: 윈도우 상단에 해당 섹션의 top이 닿으면 바로 활성화
       const li = navItems[index];
       if (scrollY >= sectionTop) {
         li.classList.add('active');
@@ -68,8 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', updateLines);
   window.addEventListener('load', updateLines);
   window.addEventListener('resize', updateLines);
-
-  //const navItems = document.querySelectorAll('.nav ul li');
 
   navItems.forEach(item => {
     item.addEventListener('click', function () {

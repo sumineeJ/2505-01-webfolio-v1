@@ -21,11 +21,11 @@
   <header class="header">
     <nav class="nav">
       <ul>
-        <li data-target=".signal" class="active">Signal</li>
-        <li data-target=".pulse">Pulse</li>
-        <li data-target=".vault">Vault</li>
-        <li data-target=".tone">Tone</li>
-        <li data-target=".ping">Ping</li>
+        <li data-target=".signal" class="active"><span>Signal</span></li>
+        <li data-target=".pulse"><span>Pulse</span></li>
+        <li data-target=".vault"><span>Vault</span></li>
+        <li data-target=".tone"><span>Tone</span></li>
+        <li data-target=".ping"><span>Ping</span></li>
       </ul>
     </nav>
   </header>
@@ -47,44 +47,57 @@
 
         <!-- 중심 다이아 -->
         <div class="dia-wrapper">
-          <svg class="diamond" viewBox="0 0 180 220">
-            <polygon
-              points="90,0 180,110 90,220 0,110"
-              fill="none"
-              stroke="#B6ABFF"
-              stroke-width="0.8"
-              stroke-opacity="0.9"
-              vector-effect="non-scaling-stroke"
-            />
+          <svg class="diamond" viewBox="0 0 160 300" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- 왼쪽 상단 (가장 밝음) -->
+            <polygon points="80,0 0,150 80,150" fill="#F3E8FF" />
+            <!-- 왼쪽 하단 (조금 더 진한 보라톤으로 조정) -->
+            <polygon points="80,150 0,150 80,300" fill="#C08BFA" />
+
+            <!-- 오른쪽 상단 (중간톤 → 살짝 다운) -->
+            <polygon points="80,0 160,150 80,150" fill="#B374EF" />
+            <!-- 오른쪽 하단 (가장 어두운 면 → 더 깊게) -->
+            <polygon points="80,150 160,150 80,300" fill="#7229B7" />
           </svg>
         </div>
 
-        <!-- 궤도 1 -->
-        <div class="orbit-wrapper orbit1">
-          <svg class="orbit" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle
-              cx="100" cy="100" r="90"
-              stroke="#B6ABFF"
-              stroke-width="0.6"
-              stroke-opacity="0.9"
-              stroke-dasharray="4 3"
-              fill="none"
-            />
+        <!-- 궤도 1 뒤쪽 -->
+        <div class="orbit-wrapper orbit1 back">
+          <svg class="orbit" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90"
+              stroke="#B6ABFF" stroke-width="1.5" stroke-opacity="0.6"
+              stroke-dasharray="282.6 282.6" stroke-dashoffset="0"
+              fill="none"/>
           </svg>
         </div>
 
-        <!-- 궤도 2 -->
-        <div class="orbit-wrapper orbit2">
-          <svg class="orbit" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <circle
-              cx="100" cy="100" r="90"
-              stroke="#B6ABFF"
-              stroke-width="0.6"
-              stroke-opacity="0.9"
-              fill="none"
-              stroke-dasharray="0 6 8 3 1000"
-              stroke-linecap="round"
-            />
+        <!-- 궤도 1 앞쪽 -->
+        <div class="orbit-wrapper orbit1 front">
+          <svg class="orbit" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90"
+              stroke="#B6ABFF" stroke-width="1.5" stroke-opacity="0.6"
+              stroke-dasharray="282.6 282.6" stroke-dashoffset="282.6"
+              fill="none"/>
+          </svg>
+        </div>
+
+        <!-- 궤도 2 뒤쪽 -->
+        <div class="orbit-wrapper orbit2 back">
+          <svg class="orbit" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90"
+              stroke="#B6ABFF" stroke-width="1.5" stroke-opacity="0.6"
+              stroke-dasharray="282.6 282.6" stroke-dashoffset="0"
+              fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- 궤도 2 앞쪽 -->
+        <div class="orbit-wrapper orbit2 front">
+          <svg class="orbit" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90"
+              stroke="#B6ABFF" stroke-width="1.5" stroke-opacity="0.6"
+              stroke-dasharray="282.6 282.6" stroke-dashoffset="282.6"
+              fill="none" stroke-linecap="round"/>
           </svg>
         </div>
 
@@ -107,12 +120,16 @@
         </div>
 
       </div>
-      <div class="ping-wrapper">
-        <div class="ping_circle"></div>
-        <div class="ping_text">Catch<br>the<br>Signal</div>
-        <div class="ping_tooltip">
-          📡 Connect to the orbit<br>궤도에 접속 중...
-        </div>
+
+      <div class="time-wrapper">
+        <p id="log-text">
+          LOGGED: 2000.00.00 / 00<span id="blink-colon">:</span>00AM<br>
+          COORDINATES: SECURE
+        </p>
+      </div>
+
+      <div class="find-wrapper">
+        <p>X: <span id="find-x">05.1600</span>°  Y: <span id="find-y">-08.0000</span>°</p>
       </div>
 
       <div class="constellation">
@@ -121,6 +138,14 @@
         <div class="aries"></div>
         <div class="aries"></div>
       </div>
+
+      <div class="ping-wrapper">
+        <p>
+          Ready to receive my signal?<br>
+          <strong>Click here to connect</strong>
+        </p>
+      </div>
+
     </section>
 
     <!-- pulse -->
@@ -229,7 +254,7 @@
           <div class="item-wrapper">
 
             <!-- 7 웹 포트폴리오 -->
-            <div class="item personal">
+            <div class="item personal" data-index="6">
               <div class="thum">
                 <img src="img/project-07-webfolio-v1.png" alt="웹 포트폴리오 v1">
                 <i class="ph ph-folder-simple"></i>
@@ -251,7 +276,7 @@
             </div>
 
             <!-- 6 돌봐효 -->
-            <div class="item team">
+            <div class="item team" data-index="5">
               <div class="thum">
                 <img src="https://picsum.photos/200/300" alt="돌봐효">
                 <i class="ph ph-folder-simple"></i>
@@ -273,7 +298,7 @@
             </div>
 
             <!-- 5 투어지 -->
-            <div class="item team">
+            <div class="item team" data-index="4">
               <div class="thum">
                 <img src="img/project-05-tourzy.png" alt="투어지">
                 <i class="ph ph-folder-simple"></i>
@@ -295,7 +320,7 @@
             </div>
 
             <!-- 4 야채부락리 -->
-            <div class="item personal">
+            <div class="item personal" data-index="3">
               <div class="thum">
                 <img src="https://picsum.photos/200/300" alt="야채부락리">
                 <i class="ph ph-folder-simple"></i>
@@ -317,7 +342,7 @@
             </div>
 
             <!-- 3 멍비서 -->
-            <div class="item personal">
+            <div class="item personal" data-index="2">
               <div class="thum">
                 <img src="img/project-03-mungbiseo.png" alt="멍비서">
                 <i class="ph ph-folder-simple"></i>
@@ -339,12 +364,12 @@
             </div>
 
             <!-- 2 인하대 -->
-            <div class="item team">
+            <div class="item personal" data-index="1">
               <div class="thum">
                 <img src="img/project-02-inha.png" alt="인하대">
                 <i class="ph ph-folder-simple"></i>
                 <ul class="tag">
-                  <li id="tag_team">#Team</li>
+                  <li id="tag_personal">#Personal</li>
                   <li>#Responsive_Web</li>
                 </ul>
                 <div class="overlay">
@@ -361,7 +386,7 @@
             </div>
 
             <!-- 1 봄바람재활의학과의원 -->
-            <div class="item personal">
+            <div class="item personal" data-index="0">
               <div class="thum">
                 <img src="img/project-01-bombaram.png" alt="봄바람재활의학과의원">
                 <i class="ph ph-folder-simple"></i>
@@ -384,6 +409,52 @@
 
           </div>
         </div>
+
+        <div class="vault-details">
+
+          <!-- 왼쪽 화살표 -->
+          <button class="btn-arrow left" aria-label="이전 프로젝트">
+            <i class="ph ph-caret-left"></i>
+          </button>
+
+          <div class="box">
+            <div class="info">
+
+              <div class="top">
+                <div class="tags">
+                  <span>#태그1</span>
+                </div>
+                <button class="btn-close"><i class="ph ph-x"></i></button>
+              </div>
+
+              <div class="middle">
+                <div class="title">타이틀</div>
+                <div class="middle-wrap">
+                  <div class="date">2025.02.11 ~ 진행 중</div>
+                  <div class="desc">
+                    <p>개인 작업물</p>
+                    <p>기획, 디자인 등 모든 부분 기여</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom">
+                <div class="links">
+                  <a href="#" target="_blank"><i class="ph ph-github-logo"></i></a>
+                  <a href="#" target="_blank"><i class="ph ph-figma-logo"></i></a>
+                  <a href="#" target="_blank"><i class="ph ph-notion-logo"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="content"></div>
+          </div>
+
+          <!-- 오른쪽 화살표 -->
+          <button class="btn-arrow right" aria-label="다음 프로젝트">
+            <i class="ph ph-caret-right"></i>
+          </button>
+        </div>
+
         <div class="design-wrapper">
 
           <div class="vault-title">
@@ -478,10 +549,12 @@
           <br>
           천천히, 조심스럽게 읽고<br>
           2~3일 안에 꼭 답장을 보내드릴게요.
+          <br>
         </p>
       </div>
       <div class="email">
-        <i class="ph-thin ph-envelope"></i><br>devmmoej@gmail.com
+        <i class="ph-thin ph-envelope"></i>
+        devmmoej@gmail.com
       </div>
     </div>
     <div class="copy">© 2025 SUMIN. All rights reserved.</div>
@@ -501,31 +574,13 @@
     <span>.</span><span>.</span><span>.</span>
   </div>
 </div>
-
-
-<!-- <div class="tree">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
-      <path d="M-30,801s350.23,47.72,320-201c0,0,1.56-107.22-186-115,0,0-50.41-11.63-89,87,0,0,100.15-3.77,90-101,0,0-33.46-74.24-138-52,0,0,59.26,85.75,206,45,0,0-62.87-50.79-96-90,0,0-17.96-104.31-117-95,0,0,3.21,98.72,129,93,0,0,105.74,33.74,148,35,0,0-27.9-131.3-142-113,0,0,3.8,98.26,151,122,0,0,71.69,43.87,3,144,0,0-8.21-90.78,62-146s-122.84-179.32-162-154c0,0,15.55-69.86-119-71,0,0,32.82,73.19,225,87,0,0-16.82-42.87-63-70s-90.83-41.97-79-138c0,0,91.69,7.73,75,156,0,0,30.76.08,85-72,0,0,54.68-93.99-34-155,0,0-60.71,63.68,37,173,0,0,33.77,90.7,53,115,0,0,111.77-89,61-228,0,0-149.19,5.82-64,252l94-22s86.87-2.9,105-84c0,0-72.21-17.75-111,102,0,0-39.26,110.27-93,130,0,0,126.91-31.86,215-138,0,0,105.93-15.94,121-142,0,0-84.16-22.23-132,141,0,0-29.2,54.77-76,106,0,0,46.87-41.28,72-40,0,0,75.46,49.69,141-6,0,0-37.21-67.25-159-3,0,0-41.68,33.78-48,82,0,0,59.46,78.75,163,35,0,0-51.75-109.21-181-36s-121.19,249.92-69,295c0,0,92.47,80.42,241,59"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-dasharray="7875.85"
-            stroke-dashoffset="7875.85">
-        <animate attributeName="stroke-dashoffset"
-                from="7875.85"
-                to="0"
-                dur="10s"
-                fill="freeze" />
-      </path>
-    </svg>
-
-      </div> -->
   
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!-- <script src="js/splash.js"></script> -->
 <script src="js/starlight.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/signal.js"></script>
+<script src="js/vault.js"></script>
 
 <!-- Swiper 슬라이드 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

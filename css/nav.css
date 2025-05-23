@@ -49,3 +49,15 @@
 .nav ul li:nth-child(3)::after {top:-33px;left:-192%;transform:rotate(19deg);}
 .nav ul li:nth-child(4)::after {top:16px;left:-190%;transform:rotate(-13deg);}
 .nav ul li:nth-child(5)::after {top:-14px;left:-214%;transform:rotate(7deg);}
+
+@media screen and (max-width: 767px) {
+  /* .nav ul li > span {display:none;} */
+  .nav {top:40px;}
+  .nav ul {gap:30px;}
+  .nav ul li {font-size:0.8125rem;}
+
+.nav ul li:nth-child(2)::after {top:17px;left:-160%;transform:rotate(-17.5deg);}
+.nav ul li:nth-child(3)::after {top:-34px;left:-165%;transform:rotate(26.5deg);}
+.nav ul li:nth-child(4)::after {top:17px;left:-160%;transform:rotate(-19deg);}
+.nav ul li:nth-child(5)::after {top:-14px;left:-180%;transform:rotate(10deg);}
+}

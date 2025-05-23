@@ -281,21 +281,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     animateMainStar();
-
     callback();
   }
 
   function revealTitles() {
-    console.log("🔥 revealTitles 실행됨");
     const logo = document.querySelector('.logo');
     const mainTitle = document.querySelector('.signal .main_title');
     const subTitle = document.querySelector('.signal .sub_title');
     const nav = document.querySelector('.nav');
 
-    setTimeout(() => logo.classList.add('show'), 1300);
-    setTimeout(() => mainTitle.classList.add('show'), 1600);
-    setTimeout(() => subTitle.classList.add('show'), 1900);
-    setTimeout(() => nav.classList.add('show'), 2200);
+    setTimeout(() => logo.classList.add('show'), 1000);
+    setTimeout(() => mainTitle.classList.add('show'), 1300);
+    setTimeout(() => subTitle.classList.add('show'), 1600);
+    setTimeout(() => nav.classList.add('show'), 1900);
   }
 
 

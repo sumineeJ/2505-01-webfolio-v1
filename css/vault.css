@@ -1,5 +1,9 @@
 .vault {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
 
+@media screen and (max-width: 767px) {
+  .vault {margin-bottom:0px;}
+}
+
 .vault .sec_title .morse_bar {gap:2.5px;}
 .vault .sec_title .morse_bar .line {min-width:7px;}
 
@@ -40,6 +44,21 @@
 #tag_team {background:#A79CEB;color:#fff;}
 #tag_playground {background:#6C60D8;color:#fff;}
 
+@media screen and (max-width: 1024px) {
+  .item-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .item-wrapper .item {
+    padding: 1.25rem;
+  }
+
+  .item-wrapper .item .thum {
+    aspect-ratio: 1 / 0.75;
+  }
+}
+
 /* design */
 .design-wrapper {margin-top:100px;}
 .design-swiper {overflow:hidden;position:relative;width:100%;}
@@ -52,3 +71,208 @@
 .swiper-pagination-bullet {width:auto;height:auto;margin:0 4px;display:inline;background: none !important; /* 파란 배경 제거 */}
 .swiper-pagination-bullet i {font-size:8px;color:rgba(255, 255, 255, 0.3);filter:drop-shadow(0 0 2px rgba(255, 255, 255, 0.2));transition:all 0.3s ease;}
 .swiper-pagination-bullet.swiper-pagination-bullet-active > i {color:#ffffff;filter:drop-shadow(0 0 4px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));}
+
+/* 프로젝트 디테일 모달창 */
+.vault-details {width:100%;height:100vh;position:fixed;top:0;left:0;background:rgba(0,0,0,0.6);z-index:1000;color:#333;display:none;}
+.vault-details .box {
+  width: 1000px;
+  height: 95vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.vault-details .info {
+  position: sticky;
+  top: 0;
+  background: #eee9f9;
+  padding: 20px 24px;
+  z-index: 10;
+}
+
+.vault-details .info .top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.vault-details .info .top .btn-close {
+  background: none;
+  border: none;
+  font-size:2rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  position:absolute;
+  right:0; top:0;
+}
+
+.vault-details .info .top .btn-close:hover {
+  color: #000;
+}
+
+.vault-details .info .tags span {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #f0ecff; /* 밝은 연보라 톤 글자 */
+  background: #5A4E7C; /* 링크 아이콘과 통일 */
+  padding: 4px 10px;
+  margin: 4px 6px 4px 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.vault-details .info .tags span:hover {
+  background: #7465a2; /* .links a:hover와 같은 색 */
+  color: #fff;
+}
+
+
+.vault-details .info .middle {
+text-align:center;
+}
+
+.vault-details .info .middle .middle-wrap {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.vault-details .info .middle .middle-wrap .desc {
+  display:flex;
+}
+
+.vault-details .info .middle .title {
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.vault-details .info .middle .date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.vault-details .info .middle .desc {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.vault-details .info .middle .desc p:first-child::before {
+  content: " | ";
+  margin-right:3px;
+}
+
+.vault-details .info .middle .desc p:first-child::after {
+  content: " · ";
+  margin-right:3px;
+}
+
+/* 링크 */
+.vault-details .info .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  margin-top: 20px;
+}
+
+.vault-details .info .bottom .links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #5A4E7C; /* ← 여기에 추천 색 중 하나 선택 */
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin:0 4px;
+}
+
+.vault-details .info .bottom .links a:hover {
+  background: #7465a2;
+}
+
+
+
+/* 스크롤 영역 content */
+.vault-details .content {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.vault-details .btn-arrow {
+position: fixed;
+top: 50%;
+transform: translateY(-50%);
+font-size: 60px;
+background: none;
+border: none;
+color: #ccc;
+cursor: pointer;
+z-index: 1001;
+transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.vault-details .btn-arrow.left {
+  left: calc(50% - 595px); /* 1000px / 2 + 40px 여유 */
+}
+
+.vault-details .btn-arrow.right {
+  left: calc(50% + 535px); /* 반대로 + */
+}
+
+.vault-details .btn-arrow:hover {
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+@media screen and (max-width: 1280px) {
+  .vault-details .btn-arrow,
+  .vault-details .btn-arrow * {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .vault-details .box {
+    width: 95vw;
+    height: 95vh;
+    max-width: 960px;
+    border-radius: 10px;
+  }
+
+  .vault-details .content {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  
+}
+
+/* ✅ 모바일 전용 (선택적으로 더 줄이고 싶을 때): ~767px */
+@media screen and (max-width: 767px) {
+  .vault-details .box {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  .vault-details .content {
+    padding: 12px;
+  }
+}
