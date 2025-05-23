@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const max = lineWidths[index];
       const canDraw = unlocked[index];
       const width = canDraw ? max * progress : 0;
+      if (!li) {
+        // console.warn(`navItems[${index + 1}] 없음 - JS에서 li::before 제어 중이라 무시함`);
+        return;
+      }
       li.style.setProperty('--line-width', `${Math.max(0, Math.min(width, max))}px`);
     });
   }

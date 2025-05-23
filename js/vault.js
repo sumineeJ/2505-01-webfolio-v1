@@ -1,5 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  const categoryButtons = document.querySelectorAll('.category li');
+  const items = document.querySelectorAll('.item');
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+
+      // 버튼 스타일 업데이트
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // 필터링 동작
+      items.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  function updatePlaceholderVisibility() {
+    const items = document.querySelectorAll('.item:not(.placeholder)');
+    const placeholder = document.querySelector('.item.placeholder');
+    const wrapper = document.querySelector('.item-wrapper');
+
+    const isMobile = window.innerWidth <= 1024;
+
+    if (isMobile || items.length % 2 === 0) {
+      placeholder.style.display = 'none';
+    } else {
+      placeholder.style.display = 'flex';
+    }
+  }
+
+  // 최초 실행 + 리사이즈 대응
+  updatePlaceholderVisibility();
+  window.addEventListener('resize', updatePlaceholderVisibility);
+
   const data = [
     {
       title: '봄바람재활의학과 BI 디자인',
@@ -23,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-2.html'
     },
     {
       title: '멍비서 반려견 건강/산책 앱 기획 및 UIUX 디자인',
@@ -35,19 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-3.html'
     },
     {
-      title: '야채부락리 게임형 웹사이트 리디자인',
+      title: 'Steam 홈페이지 리디자인',
       date: '2025.03.11 ~ 진행 중',
-      desc: ['개인 작업물', '핵심 기능 도출부터 정보 구조, 주요 화면 디자인까지 단독 진행'],
-      tags: ['개인', '앱', 'UIUX', '기획'],
+      desc: ['개인 작업물', '기획 변경 후 짧은 시간 내 완성도 높은 퍼블리싱 중심 구현'],
+      tags: ['개인', '웹', '퍼블리싱', '반응형'],
       links: {
         github: 'https://github.com/sumineeJ/2502-01-personal-inha',
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-4.html'
     },
     {
       title: '투어지 공유 자전거 앱 UIUX 기획 및 랜딩페이지 제작',
@@ -59,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-5.html'
     },
     {
       title: '돌봐효 앱 고도화 리뉴얼',
@@ -71,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-6.html'
     },
     {
       title: '개인 웹 포트폴리오 v1 제작',
@@ -83,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
         figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
         notion: ''
       },
-      content: './projects/project-1.html'
+      content: './projects/project-7.html'
     },
   ];
 

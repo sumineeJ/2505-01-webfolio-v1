@@ -1,6 +1,6 @@
 $(document).ready(function(){
   const designSwiper = new Swiper('.design-swiper', {
-    loop: true,
+    loop: false,
     loopFillGroupWithBlank: true,
 
     slidesPerView: 4, // 기본값

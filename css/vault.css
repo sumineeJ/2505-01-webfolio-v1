@@ -59,6 +59,27 @@
   }
 }
 
+.item.placeholder {
+  display: none; /* 기본은 숨김 */
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed #555;
+  border-radius: 5px;
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* 반응형 1열일 땐 강제로 숨김 */
+@media screen and (max-width: 1024px) {
+  .item.placeholder {
+    display: none !important;
+  }
+}
+
 /* design */
 .design-wrapper {margin-top:100px;}
 .design-swiper {overflow:hidden;position:relative;width:100%;}
@@ -177,6 +198,55 @@ text-align:center;
 .vault-details .info .middle .desc p:first-child::after {
   content: " · ";
   margin-right:3px;
+}
+
+/* 1024px 이하 */
+@media (max-width:1024px) {
+  .vault-details .info .middle .date,
+  .vault-details .info .middle .desc {
+    font-size: 0.8125rem;
+  }
+}
+
+/* 768px 이하 */
+@media (max-width:768px) {
+  .vault-details .info .middle .title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+  }
+  .vault-details .info .middle .date,
+  .vault-details .info .middle .desc {
+    font-size: 0.75rem;
+  }
+}
+
+/* 480px 이하 */
+@media (max-width:480px) {
+  .vault-details .info .middle .middle-wrap {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+  }
+  .vault-details .info .middle .desc p:first-child::before {
+    content: "";
+    margin-right:3px;
+  }
+  .vault-details .info .middle .date,
+  .vault-details .info .middle .desc {
+    font-size: 0.6875rem;
+  }
+}
+
+/* 360px 이하 */
+@media (max-width:360px) {
+  .vault-details .info .middle .date,
+  .vault-details .info .middle .desc {
+    font-size: 0.625rem;
+  }
 }
 
 /* 링크 */
