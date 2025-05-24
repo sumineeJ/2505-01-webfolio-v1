@@ -1,4 +1,124 @@
+@font-face {
+    font-family: 'Beeunhye';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Beeunhye.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .tone {min-width:100%;min-height:100vh;position:relative;margin-bottom:120px;}
 
 .tone .sec_title .morse_bar {gap:2px;}
 .tone .sec_title .morse_bar .line {min-width:10px;}
+
+
+
+
+.tone .tone-wrapper {display:flex;flex-direction:column;align-items:center;padding:40px 20px;}
+.tone .bookshelf {display:flex;align-items:flex-end;justify-content:center;gap:4px;flex-wrap:wrap;margin-bottom:50px;position:relative;}
+.tone .bookshelf::after {content:"";position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:110%;height:6px;background:#6e5c48;border-radius:2px;}
+
+.tone .book {width:48px;height:180px;border-radius:2px;position:relative;display:flex;align-items:flex-end;justify-content:center;transform-origin:bottom center;cursor:pointer;transition:all 0.3s;box-shadow:4px 6px 10px rgba(0,0,0,0.4);clip-path:polygon(0 0,90% 0,100% 10%,100% 100%,0 100%);padding-bottom:16px;}
+.tone .book:hover {transform: translateY(-10px);
+  box-shadow: 6px 10px 16px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.08);}
+.tone .book::after {content:'';position:absolute;top:0;right:0;width:10%;height:100%;background:rgba(0,0,0,0.2);clip-path:polygon(0 0,100% 10%,100% 100%,0 100%);z-index:1;}
+.tone .book::before {content:'';position:absolute;top:10px;left:4px;width:34px;height:4px;background:#fff;box-shadow:0 8px 0 #fff,0 16px 0 #fff;opacity:0.7;z-index:2;pointer-events:none;}
+.tone .label {writing-mode:vertical-lr;text-orientation:upright;font-size:13px;color:#fff;letter-spacing:-2px;word-spacing:-8px;line-height:1;pointer-events:none;z-index:3;transform:translateX(-2px);padding-top:40px;}
+
+.tone .book1 {background:linear-gradient(135deg,#B06565,#743E3E);height:200px;} /* 레드브릭 */
+.tone .book2 {background:linear-gradient(135deg,#C89D58,#8A6230);height:180px;} /* 카라멜 옐로우 */
+.tone .book3 {background:linear-gradient(135deg,#7A9C7E,#475F4D);height:210px;} /* 세이지 그린 */
+.tone .book4 {background:linear-gradient(135deg,#9386B9,#584C76);height:190px;} /* 모브 퍼플 */
+.tone .book5 {background:linear-gradient(135deg,#708CA3,#3E5164);height:205px;} /* 데님 블루 */
+.tone .book6 {background:linear-gradient(135deg,#BA8D9F,#7A5E6B);height:195px;} /* 말린 장미 */
+.tone .book7 {background:linear-gradient(135deg,#C6B875,#8F8450);height:185px;} /* 머스타드 올리브 */
+
+.tone .book-detail {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0.5rem;
+  background: linear-gradient(
+    to bottom,
+    #0E1A40 0%,
+    #0E1A40 10%,
+    #142248 25%,
+    #1A294E 40%,
+    #1D2F56 60%,
+    #222C54 80%,
+    #1E2A4C 100%
+    );
+  border-radius: 5px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  position:relative;
+}
+
+.tone .book-detail .page {
+  flex: 1;
+  padding: 36px;
+  background-color: rgba(255,255,255,0.95);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+  height:650px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.tone .book-detail .page::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 10px 10px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tone .detail-content {
+  color:#333;
+  height:100%;
+}
+
+.tone .detail-content div {
+  font-size: 16px;
+  
+}
+
+.tone .detail-content p {
+  font-size:24px;
+  font-family: 'Beeunhye';
+  margin-bottom:20px;
+}
+
+.tone .book-detail .right-page .detail-content {
+  position:relative;
+}
+
+/* 초기 책 */
+.tone .detail-content .first {
+  display:flex;flex-direction:column;justify-content:center;height:100%;
+}
+
+.tone .detail-content .second {
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+}
+
+.tone .detail-content .second img {
+  width:450px;
+}
+
+.tone .ring {position:absolute;width:36px;height:8px;border-radius:999px;left:50%;transform:translateX(-50%);background:#999;box-shadow: 0 2px 4px rgba(0,0,0,0.3);}
+
+.tone .ring1 {top:10%;}
+.tone .ring2 {top:20%;}
+.tone .ring3 {top:30%;}
+
+.tone .ring4 {bottom:10%;}
+.tone .ring5 {bottom:20%;}
+.tone .ring6 {bottom:30%;}
