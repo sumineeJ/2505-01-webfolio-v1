@@ -3,15 +3,18 @@
 /* background */
 .canvas {position:absolute;top:0;left:0;display:block;width:100%;height:100%;}
 
-.signal .title {display:flex;justify-content:center;align-items:center;min-height:100vh;gap:450px;}
-.signal .main_title {width:50%;font-size:5rem;text-align:right;opacity:0;transform:translateX(100px);transition:all 0.8s ease;}
-.signal .sub_title {width:50%;font-family:"Cormorant Garamond", serif;font-size:1.125rem;line-height:140%;letter-spacing:3px;opacity:0;transform:translateX(-100px);transition:all 0.8s ease;}
+.signal-wrapper {height:100vh;display:flex;justify-content:center;align-items:center;}
+
+.signal .title {width:50%;text-align:right;}
+.signal .main_title {font-size:5rem;opacity:0;transform:translateX(100px);transition:all 0.8s ease;}
+.signal .sub_title {font-family:"Cormorant Garamond", serif;font-size:1.125rem;line-height:140%;letter-spacing:3px;opacity:0;transform:translateX(-100px);transition:all 0.8s ease;}
 
 .signal .main_title.show {opacity:1;transform:translateX(0);}
 .signal .sub_title.show {opacity:1;transform:translateX(0);}
 
 /* logo */
-.logo {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) translateY(30px);opacity:0;transition:all 0.8s ease;}
+.logo-wrapper {position:relative;width:50%;}
+.logo {position:absolute;top:50%;left:25%;transform:translateY(-50%) translateY(30px);opacity:0;transition:all 0.8s ease;}
 .logo.show {
   opacity: 1;
   transform:translate(-50%,-50%) translateY(0);
