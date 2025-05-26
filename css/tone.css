@@ -86,14 +86,16 @@
 }
 
 .tone .detail-content div {
-  font-size: 16px;
-  
+  font-size: 20px;
+  margin-bottom:30px;
 }
 
 .tone .detail-content p {
   font-size:24px;
-  font-family: 'Beeunhye';
-  margin-bottom:20px;
+  font-family:'Beeunhye';
+  line-height:1.2;
+  padding-left:30px;
+  padding-bottom:30px;
 }
 
 .tone .book-detail .right-page .detail-content {
@@ -122,3 +124,39 @@
 .tone .ring4 {bottom:10%;}
 .tone .ring5 {bottom:20%;}
 .tone .ring6 {bottom:30%;}
+
+
+/* 1024px 이하 */
+@media (max-width:1024px) {
+  .tone .book-detail {
+    display: block;
+  }
+  .tone .book-detail .page {
+    height:auto;
+  }
+  .tone .detail-content p {
+    padding-bottom:10px;
+  }
+  .tone .book-detail .right-page {display:none;}
+  .tone .ring {display:none;}
+
+  /* 초기 책 */
+  .tone .detail-content .first {
+    height:350px;
+  }
+}
+
+/* 768px 이하 */
+@media (max-width:768px) {
+  
+}
+
+/* 480px 이하 */
+@media (max-width:480px) {
+  
+}
+
+/* 360px 이하 */
+@media (max-width:360px) {
+
+}

@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['개인 작업물', '기획, 디자인 모든 부분 단독 작업'],
       tags: ['개인', 'BI디자인', '로고디자인'],
       links: {
+        website: '',
         github: 'https://github.com/sumineeJ/2412-01-personal-bombaram',
         figma: '',
         notion: ''
@@ -59,8 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['개인 작업물', '콘텐츠 정보 구조 정리부터 퍼블리싱까지 전체 흐름 설계 및 구현 단독 진행'],
       tags: ['개인', '퍼블리싱', '반응형', '기획'],
       links: {
+        website: 'https://sumineej.github.io/2502-01-personal-inha/',
         github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=L1KVzFqao7SdSppz-1',
         notion: ''
       },
       content: './projects/project-2.html'
@@ -71,8 +73,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['개인 작업물', '핵심 기능 도출부터 정보 구조, 주요 화면 디자인까지 단독 진행'],
       tags: ['개인', '앱', 'UIUX', '기획'],
       links: {
-        github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        website: '',
+        github: '',
+        figma: 'https://www.figma.com/design/cVzuYkXa0tmv8c8Oa6kkyU/%EB%AA%A8%EB%B0%94%EC%9D%BC%EC%95%B1_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_1_%EB%A9%8D%EB%B9%84%EC%84%9C?node-id=0-1&t=DsZZqNRn58nhLilW-1',
         notion: ''
       },
       content: './projects/project-3.html'
@@ -83,8 +86,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['개인 작업물', '기획 변경 후 짧은 시간 내 완성도 높은 퍼블리싱 중심 구현'],
       tags: ['개인', '웹', '퍼블리싱', '반응형'],
       links: {
-        github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        website: '',
+        github: 'https://github.com/sumineeJ/2503-01-personal-steam',
+        figma: '',
         notion: ''
       },
       content: './projects/project-4.html'
@@ -95,8 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['팀 작업물', '화면 구조 기획 일부 참여부터 랜딩페이지 퍼블리싱 단독 진행'],
       tags: ['팀', '앱/웹', 'UIUX', '퍼블리싱', '기획'],
       links: {
-        github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        website: 'http://58.239.58.243:50601/kdt3/team_1/www',
+        github: 'https://github.com/sumineeJ/2504-01-team-tourzy',
+        figma: 'https://www.figma.com/design/Fh7U1s3HJ5L7eWQxMXqEur/%ED%88%AC%EC%96%B4%EC%A7%80-%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=0-1&t=4uRdKFtHQ7SUB98d-1',
         notion: ''
       },
       content: './projects/project-5.html'
@@ -107,8 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['팀 작업물', '정보구조도, 플로우차트, 스토리보드 등 기획 일부 참여'],
       tags: ['팀', '앱', '기획'],
       links: {
-        github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        website: '',
+        github: 'https://github.com/sumineeJ/2505-01-team-dolbwahyo',
+        figma: 'https://www.figma.com/design/57pyagKQfWN4jvFZWiuUp9/%EB%8F%8C%EB%B4%90%ED%9A%A8B%EC%A1%B0_%ED%94%BC%EA%B7%B8%EB%A7%88?node-id=1-3&t=MPW6AKcqwygFll17-1',
         notion: ''
       },
       content: './projects/project-6.html'
@@ -119,8 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
       desc: ['개인 작업물', '섹션 기획부터 인터랙션, 반응형 퍼블리싱까지 직접 설계 및 구현'],
       tags: ['개인', '퍼블리싱', '반응형', '인터랙션', '설계'],
       links: {
-        github: 'https://github.com/sumineeJ/2502-01-personal-inha',
-        figma: 'https://www.figma.com/design/6oRGRrcR8ZAMkwpaMzvUo3/0211_%EB%B0%98%EC%9D%91%ED%98%95%EC%9B%B9_%EA%B0%9C%EC%9D%B8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81.fig?node-id=0-1&t=NWl7afXFjeacisFi-1',
+        website: '',
+        github: 'https://github.com/sumineeJ/2505-01-webfolio-v1',
+        figma: '',
         notion: ''
       },
       content: './projects/project-7.html'
@@ -157,15 +164,17 @@ document.addEventListener('DOMContentLoaded', function () {
     descEl.innerHTML = item.desc.map(p => `<p>${p}</p>`).join('');
     tagsEl.innerHTML = item.tags.map(tag => `<span>${tag}</span>`).join('');
     linksEl.innerHTML = `
-      ${item.links.github ? `<a href="${item.links.github}" target="_blank"><i class="ph ph-github-logo"></i></a>` : ''}
-      ${item.links.figma ? `<a href="${item.links.figma}" target="_blank"><i class="ph ph-figma-logo"></i></a>` : ''}
-      ${item.links.notion ? `<a href="${item.links.notion}" target="_blank"><i class="ph ph-notion-logo"></i></a>` : ''}
+      ${item.links.website ? `<a href="${item.links.website}" target="_blank" title="homepage"><i class="ph ph-house-line"></i></a>` : ''}
+      ${item.links.github ? `<a href="${item.links.github}" target="_blank" title="GitHub"><i class="ph ph-github-logo"></i></a>` : ''}
+      ${item.links.figma ? `<a href="${item.links.figma}" target="_blank" title="Figma"><i class="ph ph-figma-logo"></i></a>` : ''}
+      ${item.links.notion ? `<a href="${item.links.notion}" target="_blank" title="Notion"><i class="ph ph-notion-logo"></i></a>` : ''}
     `;
 
     fetch(item.content)
       .then(res => res.text())
       .then(html => {
         contentEl.innerHTML = html;
+        contentEl.scrollTop = 0;
       })
       .catch(err => {
         contentEl.innerHTML = '<p style="color:red;">내용을 불러올 수 없습니다.</p>';
