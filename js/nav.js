@@ -9,12 +9,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.querySelector('.ping-wrapper').addEventListener('click', () => {
-    const target = document.querySelector('.pulse');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+  const pingBtn = document.querySelector('.ping-wrapper');
+  if (pingBtn) {
+    pingBtn.addEventListener('click', () => {
+      const target = document.querySelector('.pulse');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  // document.querySelector('.ping-wrapper').addEventListener('click', () => {
+  //   const target = document.querySelector('.pulse');
+  //   if (target) {
+  //     target.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // });
 
   const sections = [
     document.querySelector('.signal'),
@@ -31,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrollY = window.scrollY;
     const unlocked = [];
 
-    // ✅ 반응형 lineWidths 설정
+    // 반응형 lineWidths 설정
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const lineWidths = isMobile ? [70, 70, 65, 60] : [91, 91, 86, 83];
 
