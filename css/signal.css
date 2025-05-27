@@ -3,18 +3,17 @@
 /* background */
 .canvas {position:absolute;top:0;left:0;display:block;width:100%;height:100%;}
 
-.signal-wrapper {height:100vh;display:flex;justify-content:center;align-items:center;}
-
-.signal .title {width:50%;text-align:right;}
-.signal .main_title {font-size:5rem;opacity:0;transform:translateX(100px);transition:all 0.8s ease;}
-.signal .sub_title {font-family:"Cormorant Garamond", serif;font-size:1.125rem;line-height:140%;letter-spacing:3px;opacity:0;transform:translateX(-100px);transition:all 0.8s ease;}
+.signal .title {display:flex;justify-content:center;align-items:center;min-height:100vh;gap:450px;padding-bottom:15px;}
+.signal .main_title {width:50%;text-align:right;opacity:0;transform:translateX(100px);transition:all 0.8s ease;}
+.signal .main_title h1 {font-size:2.125rem;font-weight:700;letter-spacing:0.15rem;color:#CCC4DA;}
+.signal .main_title p {font-size:0.875rem;font-weight:300;letter-spacing:0.1rem;padding-right:2px;color:#ddd;margin-bottom:8px;}
+.signal .sub_title {width:50%;color:#CCC4DA;font-size:1.125rem;line-height:1.8;letter-spacing:-0.02rem;opacity:0;transform:translateX(-100px);transition:all 0.8s ease;}
 
 .signal .main_title.show {opacity:1;transform:translateX(0);}
 .signal .sub_title.show {opacity:1;transform:translateX(0);}
 
 /* logo */
-.logo-wrapper {position:relative;width:50%;}
-.logo {position:absolute;top:50%;left:25%;transform:translateY(-50%) translateY(30px);opacity:0;transition:all 0.8s ease;}
+.logo {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) translateY(30px);opacity:0;transition:all 0.8s ease;}
 .logo.show {
   opacity: 1;
   transform:translate(-50%,-50%) translateY(0);
@@ -25,7 +24,7 @@
 
 @keyframes softBounce {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(0px); }
   100% { transform: translateY(0); }
 }
 
@@ -118,7 +117,7 @@
 .signal .ping-wrapper {bottom:3rem;right:3rem;text-align:right;cursor:pointer;pointer-events:all;}
 
 /* 양자리! */
-.signal .constellation {position:absolute;top:15%;right:10%;width:250px;height:130px;transition:all 0.5s;cursor:pointer;}
+.signal .constellation {position:absolute;bottom:15%;right:10%;width:250px;height:130px;transition:all 0.5s;cursor:pointer;}
 .signal .constellation:hover {transform:translateY(-30px);}
 
 .signal .constellation .aries {position:absolute;width:4px;height:4px;background:#fff;border-radius:50%;box-shadow:0 0 4px #fff;animation: sparkle 2.5s infinite ease-in-out;}
