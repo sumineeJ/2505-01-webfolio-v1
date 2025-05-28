@@ -160,3 +160,10 @@
 @media (max-width:360px) {
 
 }
+
+
+/* 책 오른쪽 페이지 */
+.book-detail .right-page p {padding-left:0px;text-align:center;}
+
+.book-detail .right-page .book_star {height:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.book-detail .right-page .book_star iframe {margin-bottom:20px;border-radius:5px;}

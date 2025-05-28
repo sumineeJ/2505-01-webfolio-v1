@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
       links: {
         website: 'http://58.239.58.243:50601/kdt3/team_1/www',
         github: 'https://github.com/sumineeJ/2504-01-team-tourzy',
-        figma: 'https://www.figma.com/design/Fh7U1s3HJ5L7eWQxMXqEur/%ED%88%AC%EC%96%B4%EC%A7%80-%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=0-1&t=4uRdKFtHQ7SUB98d-1',
+        figma: 'https://www.figma.com/design/BEdoNGRwJvaN8Yww4dboiN/%F0%9F%A4%9D-250404_%ED%88%AC%EC%96%B4%EC%A7%80_%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=0-1&t=PUFYw4G9tXGFC3Cn-1',
         notion: ''
       },
       content: './projects/project-5.html'
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
       links: {
         website: '',
         github: 'https://github.com/sumineeJ/2505-01-team-dolbwahyo',
-        figma: 'https://www.figma.com/design/57pyagKQfWN4jvFZWiuUp9/%EB%8F%8C%EB%B4%90%ED%9A%A8B%EC%A1%B0_%ED%94%BC%EA%B7%B8%EB%A7%88?node-id=1-3&t=MPW6AKcqwygFll17-1',
+        figma: 'https://www.figma.com/design/oMihQI0yIqRK3cSAZUnH62/%F0%9F%A4%9D-250507_%EB%8F%8C%EB%B4%90%ED%9A%A8_%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?node-id=0-1&t=gYsi3zKyijGCcexG-1',
         notion: ''
       },
       content: './projects/project-6.html'

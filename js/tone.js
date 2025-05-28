@@ -45,7 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/star.gif" alt="별똥별 애니메이션" style="width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+        <div class="book_star">
+          <iframe src="resource/book1_star.html" class="star_iframe" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+          <p>소원 빌고 가실래요? 😁</p>
+        </div>
       `
     },
     "daily": {
