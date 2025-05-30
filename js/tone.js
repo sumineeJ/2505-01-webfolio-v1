@@ -75,7 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/daily.jpg" alt="일상 감성 이미지" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     },
     "animation": {
@@ -109,7 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/interaction.gif" alt="애니메이션 예시" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     },
     "taste": {
@@ -139,7 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/taste.jpg" alt="취향 이미지" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     },
     "rules": {
@@ -174,7 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/rules.png" alt="룰북 노트" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     },
     "accessibility": {
@@ -210,7 +218,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/a11y.png" alt="접근성 노트" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     },
     "note": {
@@ -247,7 +257,9 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
       `,
       right: `
-        <img src="images/ux.png" alt="UX 사례" style="width:100%; border-radius:8px;">
+        <div class="book_star">
+          <p>페이지 준비 중입니다.</p>
+        </div>
       `
     }
   };
